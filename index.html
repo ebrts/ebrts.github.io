@@ -1,1 +1,35 @@
-It works, I swear!
+<doctype html>
+
+<html>
+<head>
+  <title>D3plus</title>
+  <script src="https://d3plus.org/js/d3plus.full.min.js"></script>
+</head>
+
+<body>
+  <h1>Hello World</h1>
+  <div id="viz"></div>
+</body>
+
+<script>
+var data = [
+  {"population":523874, "income": 40000, name: "Dave", "value":75},
+  {"population":100000, "income": 60000, name: "Alex", "value":120},
+  {"population":523874, "income": 25000, name: "Jen", "value": 200}
+];
+
+var myViz = d3plus.viz()
+  .container("#viz")
+  .type("scatter")
+  .data(data)
+  .id("name")
+  .x("population")
+  .y("income")
+  .size("value")
+  .color("value")
+  .draw();
+
+</script>
+
+</html>
+</html>
